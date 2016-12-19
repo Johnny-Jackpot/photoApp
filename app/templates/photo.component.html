@@ -1,0 +1,17 @@
+<h4 class="back" (click)="goBack()">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Back
+</h4>
+<div *ngIf="src" class="container">
+    <div>
+        <img src="{{ src }}" alt="photo.text" />
+    </div>
+    <div *ngIf="photo.text" class="description">
+        <div>
+            <p>Description: </p>
+        </div>
+        <div>
+            <p>{{ photo.text }}<p>
+        </div>
+    </div>
+    
+<div>

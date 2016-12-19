@@ -1,0 +1,22 @@
+<h4 class="album-name" (click)="goBack()">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+    <span>{{ albumName }}</span>
+</h4>
+<p *ngIf="!photos.length && !noPhotos">Loading...</p>
+<ul *ngIf="photos.length">
+    <li *ngFor="let photo of photos" >
+        <div class="container" (mouseenter)="onMouseEnter($event)">
+            <div>
+                <img [src]="photo.src" />
+            </div>
+            <span class="select" (click)=goToPhoto(photo.id)>
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                <span>Select</span>
+            </span>
+        </div>
+    </li>
+</ul>
+<div *ngIf="noPhotos">
+    <p>You haven`t photos in this album.</p>
+</div>

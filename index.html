@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/" >
+    <title>App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="/app/styles/reset.css">
+    <link rel="stylesheet" href="/app/styles/main-styles.css">
+    <link rel="stylesheet" href="/app/libs/bootstrap-3.3.7-dist/css/bootstrap.css" type="text/css">
+
+    <script src="app/libs/jquery-3.1.1/jquery-3.1.1.js"></script>
+    <script src="app/libs/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <header class="main-header">
+      <div class="main-header-search clearfix">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        <input type="text" placeholder="Search" />
+        <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+      </div>
+    </header>
+    
+
+    <my-app>Loading ...</my-app>
+  </body>
+</html>

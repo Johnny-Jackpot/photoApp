@@ -1,0 +1,32 @@
+<h4 class="greetings">Welcome, {{ name }}.</h4>
+<div>
+    <ul *ngIf="albums.length">
+        <li *ngFor="let album of albums" class="album">
+            <div>
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <div class="album-cover" (click)="goToAlbum(album.id)">
+                            <img [src]="album['thumb_src']" alt="">
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <div>
+                            <h5 (click)="goToAlbum(album.id)">{{ album.title }}</h5>
+                            <p>
+                                <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> {{ album.size }} files
+                            </p>
+                            <p *ngIf="album.updated">
+                                <span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{ album.updated }}
+                            </p>
+                        </div>
+                        <div (click)="goToAlbum(album.id)">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <h3 *ngIf="noAlbums">You haven\`t albums yet.</h3>
+</div>

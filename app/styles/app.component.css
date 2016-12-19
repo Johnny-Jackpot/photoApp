@@ -1,0 +1,17 @@
+.app-tab{
+	margin-left: 5px;
+}
+.nav-tabs > li > a {
+	border-color: #e6e6e6;
+	border-bottom-color: transparent;
+	color: #9bcafd;
+}
+.nav-tabs > li.active > a {
+	color: #1e89fa;
+}
+.nav-tabs > li > a {
+	padding: 3px 15px;
+}
+.glyphicon {
+	font-size: 18px;
+}

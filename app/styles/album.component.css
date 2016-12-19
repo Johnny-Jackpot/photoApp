@@ -1,0 +1,52 @@
+.album-name { 
+    padding: 0 0 10px 10px;
+    color: grey;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+.album-name span:last-child {
+    margin-left: 10px;
+}
+ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0 0 10px 10px;
+}
+.container {
+    width: 100px;
+    height: 120px;
+    background: rgba(221, 221, 221, 0.5);
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    overflow: hidden;
+}
+.container > div {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin-left: -15px;
+}
+.container > div > img {
+    margin: 50% 0 0 50%;
+    transform: translate(-50%, -50%);
+}
+li > div {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.select {
+    color: rgb(0, 171, 255);
+    font-size: 12px;
+    display: block;
+    margin-left: -10px;
+    cursor: pointer;
+}
+.select > span:last-child {
+    text-decoration: underline;
+}
+li {
+    position: relative;
+}
